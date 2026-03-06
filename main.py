@@ -3,7 +3,7 @@ from google import genai
 from PIL import Image
 import os
 
-client = genei.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 def main(page: ft.Page):
     page.title = "Brain & Eyes A.I"
@@ -76,3 +76,4 @@ ft.app(target=main, view=ft.AppView.WEB_BROWSER, host="0.0.0.0", port=port)
             
         
                                             
+
