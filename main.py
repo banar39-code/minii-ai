@@ -72,7 +72,7 @@ def main(page: ft.Page):
                 ilgeeh_zuils.append(asuult) 
 
             hariult = client.models.generate_content(
-                model='gemini-3.0-flash', 
+                model='gemini-3-flash-preview', 
                 contents=ilgeeh_zuils
             )
             
@@ -100,3 +100,4 @@ ft.app(target=main, view=ft.AppView.WEB_BROWSER, host="0.0.0.0", port=port, uplo
             
         
                                             
+
