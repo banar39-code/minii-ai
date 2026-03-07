@@ -21,10 +21,12 @@ def main(page: ft.Page):
 
     
     def zurag_huulagdsan(e: ft.FilePickerUploadEvent):
-        if not e.error:
+        if e.error:
+            chat_delgets.controls.append(ft.Text(f"⚠️ Zurag huulahad aldaa garlaa: {e.error}", color="red"))
+        else:
             songoson_zurag[0] = os.path.join("uploads", e.file_name)
-            chat_delgets.controls.append(ft.Text("📷 Зураг серверт амжилттай орж ирлээ! Одоо асуултаа бичээд 🚀 дарна уу.", color="orange"))
-            page.update()
+            chat_delgets.controls.append(ft.Text("✅ Zurag amjilttai orj irlee! odoo asuultaa bicheed 🚀 darna uu?.", color="green", weight="bold"))
+        page.update()
 
    
     def zurag_songoson(e: ft.FilePickerResultEvent):
