@@ -37,7 +37,10 @@ def main(page: ft.Page):
             file_picker.upload([ft.FilePickerUploadFile(f.name, upload_url=upload_url)])
 
     
-    file_picker = ft.FilePicker(on_result=zurag_songoson, on_upload=zurag_huulagdsan)
+    
+    file_picker = ft.FilePicker()
+    file_picker.on_result = zurag_songoson
+    file_picker.on_upload = zurag_huulagdsan
     page.overlay.append(file_picker)
 
     
